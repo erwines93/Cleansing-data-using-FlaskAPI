@@ -1,0 +1,20 @@
+tags:
+  - name : Process to Upload File
+get:
+  - description : Text yang akan diproses
+consumes:
+  - multipart/form-data
+parameters:
+  - name : file
+    in : formData
+    description : File to Upload
+    required : True
+    type : file
+    extensions : csv
+responses:
+    '200':
+      description: Successful response
+    '400':
+      description: Bad Request
+    '500':
+      description: Internal Server Error
